@@ -1,0 +1,22 @@
+{
+  "name": "chiji",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javion25/chiji.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javion25/chiji/issues"
+  },
+  "homepage": "https://github.com/javion25/chiji#readme",
+  "dependencies": {
+    "koa": "^2.3.0"
+  }
+}
