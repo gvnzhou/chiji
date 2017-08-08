@@ -1,5 +1,7 @@
-import React from 'react';
 import 'regenerator-runtime/runtime';
+import bs from '../common/bs';
+
+@bs
 
 export default class extends React.Component {
     constructor() {
