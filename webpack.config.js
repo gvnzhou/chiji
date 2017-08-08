@@ -1,13 +1,13 @@
 const path = require('path');
 const webpack = require("webpack");
-const htmlWebpackPluginConfig = require("./src/config/html-webpack-plugin.config");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const autoRefresh = require("./src/config/browser-sync.config");
 const nodeExternals = require('webpack-node-externals');
+const htmlWebpackPluginConfig = require("./config/html-webpack-plugin.config");
+const autoRefresh = require("./config/browser-sync.config");
 
 //入口文件
 let entry = {
-    index: './src/module/index/index_entry'
+    index: './client/module/index/index_entry'
 };
 
 //浏览器端的配置

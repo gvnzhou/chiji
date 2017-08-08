@@ -9,7 +9,7 @@ const readFileAsync = Promise.promisify(fs.readFile);
 const serve = require('koa-static-server');
 const RES_PATH = path.resolve(__dirname, '../build/');
 
-app.use(serve({rootDir: RES_PATH}));
+
 
 /**
  * 读取HTML模版，返回cheerio实例
@@ -39,6 +39,7 @@ router.get('/api/todo_list', async(ctx, next) => {
 router.get('/', async(ctx, next) => {
 
   let $ = await loadHTMLTemplate(path.resolve(__dirname, '../build/index.html'));
+  return ctx.body = 'aasdsads';
 
   if (!$) {
       return ctx.body = null;
@@ -68,6 +69,19 @@ router.get('/', async(ctx, next) => {
 });
 
 app.use(router.middleware());
+
+app.use(function (ctx, next) {
+
+    //如果路由中间件已经有数据了，无需再走静态文件中间件了
+    if (ctx.body) {
+        return true;
+    }
+
+    return next();
+});
+
+
+app.use(serve({rootDir: RES_PATH}));
 
 app.listen(8088, _ => {
     console.log('localhost:8088 is server started')
