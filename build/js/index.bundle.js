@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/build";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 82);
@@ -2314,7 +2314,7 @@ eval("var g;\r\n\r\n// This works in non-strict mode\r\ng = (function() {\r\n\tr
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(process) {\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nexports.default = function (_) {\n  if (process.browser) {\n    document.write(\"<script async src='http://HOST:18441/browser-sync/browser-sync-client.js?v=2.18.7'><\\/script>\".replace(\"HOST\", location.hostname));\n  }\n};\n/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../node_modules/process/browser.js */ 22)))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTg3LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9tb2R1bGUvY29tbW9uL2JzLmpzPzhlOGQiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgXyA9PiB7XG4gIGlmIChwcm9jZXNzLmJyb3dzZXIpIHtcbiAgICBkb2N1bWVudC53cml0ZShcIjxzY3JpcHQgYXN5bmMgc3JjPSdodHRwOi8vSE9TVDoxODQ0MS9icm93c2VyLXN5bmMvYnJvd3Nlci1zeW5jLWNsaWVudC5qcz92PTIuMTguNyc+PFxcL3NjcmlwdD5cIi5yZXBsYWNlKFwiSE9TVFwiLCBsb2NhdGlvbi5ob3N0bmFtZSkpO1xuICB9XG59XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9tb2R1bGUvY29tbW9uL2JzLmpzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///187\n");
+eval("/* WEBPACK VAR INJECTION */(function(process) {\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nexports.default = function (_) {\n  if (process.browser) {\n    // document.write(\"<script async src='http://HOST:18441/browser-sync/browser-sync-client.js?v=2.18.7'><\\/script>\".replace(\"HOST\", location.hostname));\n  }\n};\n/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../node_modules/process/browser.js */ 22)))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTg3LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9tb2R1bGUvY29tbW9uL2JzLmpzPzhlOGQiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgXyA9PiB7XG4gIGlmIChwcm9jZXNzLmJyb3dzZXIpIHtcbiAgICAvLyBkb2N1bWVudC53cml0ZShcIjxzY3JpcHQgYXN5bmMgc3JjPSdodHRwOi8vSE9TVDoxODQ0MS9icm93c2VyLXN5bmMvYnJvd3Nlci1zeW5jLWNsaWVudC5qcz92PTIuMTguNyc+PFxcL3NjcmlwdD5cIi5yZXBsYWNlKFwiSE9TVFwiLCBsb2NhdGlvbi5ob3N0bmFtZSkpO1xuICB9XG59XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9tb2R1bGUvY29tbW9uL2JzLmpzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///187\n");
 
 /***/ })
 /******/ ]);

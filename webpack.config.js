@@ -15,7 +15,7 @@ let browserConfig = {
     entry,
     output: {
       path: path.join(__dirname, 'build'),
-      publicPath: '/build',
+      publicPath: '/',
       filename: "js/[name].bundle.js",
       chunkFilename: "js/[id].bundle.js"
     },

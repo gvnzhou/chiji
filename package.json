@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack -d -w --progress --colors",
+    "build": "webpack -d -w --progress --colors",    
+    "start": "nodemon --harmony server/index",
     "test-server": "anywhere -s -p 8001 -d ./build"
   },
   "repository": {
@@ -19,7 +20,11 @@
   },
   "homepage": "https://github.com/javion25/chiji#readme",
   "dependencies": {
+    "bluebird": "^3.5.0",
+    "cheerio": "^1.0.0-rc.2",
     "koa": "^2.3.0",
+    "koa-better-router": "^2.1.1",
+    "koa-static-server": "^1.3.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -37,6 +42,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
+    "nodemon": "^1.11.0",
     "regenerator-runtime": "^0.10.5",
     "stylus-loader": "^3.0.1",
     "url-loader": "^0.5.9",
