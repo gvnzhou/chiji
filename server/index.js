@@ -1,6 +1,8 @@
 import Koa from 'koa';
 import koaBetterRouter from 'koa-better-router';
+import React from 'react';
 import {renderToString, renderToStaticMarkup} from 'react-dom/server';
+import Home from '../client/containers/Home/index'
 
 const app = new Koa();
 const router = koaBetterRouter().loadMethods();
@@ -13,7 +15,7 @@ const router = koaBetterRouter().loadMethods();
 router.get('/', async(ctx, next) => {
 
 
-    return ctx.body = "asdasdasd";
+    return ctx.body = renderToString(<Home />);
 
 
 });

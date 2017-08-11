@@ -4,8 +4,6 @@ import { Home } from './containers/Home'
 
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Routes />
-  </Provider>,
+  <Home />,
 	document.getElementById('root')
 );
