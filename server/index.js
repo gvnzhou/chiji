@@ -23,5 +23,5 @@ router.get('/', async(ctx, next) => {
 app.use(router.middleware());
 
 app.listen(3333, () => {
-    console.log("Server is listening 127.0.0.1:3333")
+    console.log("Server is listening at 127.0.0.1:3333")
 });
