@@ -15,7 +15,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div>
-        <p>阿斯达四大四大撒</p>
+        <p>阿斯达四大四大撒111123</p>
 			</div>
 		)
 	}
