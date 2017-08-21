@@ -1,10 +1,16 @@
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './client/index.js',
+  devtool: 'cheap-module-eval-source-map',
+  entry: [
+    
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true',
+    
+    './client/index.js'
+  ],
   output: {
     path: `${__dirname}/dist`,
-    publicPath: '/dist/',
+    publicPath: '/static/',
     filename: 'index.bundle.js'
   },
   module: {
@@ -13,18 +19,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: "babel-loader",
-            options: {
-              
-            }
-          }
+          'babel-loader',
         ]
       }
     ]
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
 }

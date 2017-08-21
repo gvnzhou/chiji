@@ -9,13 +9,18 @@ class Home extends Component {
 	// }
 
 	componentDidMount() {
-		document.title = '麦萌漫画后台'
+		document.title = '吃鸡吧'
   }
 
 	render() {
 		return (
 			<div>
-        <p>阿斯达四大四大撒111123</p>
+				<header>
+					logo
+				</header>
+        <nav>
+					导航12323sawdada
+				</nav>
 			</div>
 		)
 	}
