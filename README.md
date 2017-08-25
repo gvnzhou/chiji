@@ -5,7 +5,7 @@
 
 ## 技术栈
 
-React + Webpack + ES6/ES7 + Koa2.0
+React + React-Router4.0 + Webpack + ES6/ES7 + Koa2.0
 
 ## 项目运行
 
@@ -13,10 +13,11 @@ React + Webpack + ES6/ES7 + Koa2.0
 
 # 目标功能
 
-- [ ] webpack配置客户端环境 -- 
-- [ ] react热替换 -- 
-- [ ] react异步加载 -- 
-- [ ] ssr服务器端配置 -- 
+- [x] Webpack搭建客户端运行环境 -- 完成
+- [ ] Eslint代码校验 -- 
+- [ ] React热替换 -- 
+- [ ] React异步加载 -- 
+- [ ] SSR服务器端配置 -- 
 
 # 项目结构
 

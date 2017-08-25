@@ -3,7 +3,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const process = require('process');
-const HtmlWebpackPlugin = require('html-webpack-plugin'),
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /**
   设置默认常用路径
@@ -29,7 +29,7 @@ const config = {
     filename: jsDir + '[name].js',
     publicPath: '/'
   },
-  modules: {
+  module: {
     // 加载器配置
     rules: [
       {

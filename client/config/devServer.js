@@ -27,5 +27,4 @@ var creatServer = () => {
     });
 };
 
-//调用创建koa服务器方法
 creatServer();
