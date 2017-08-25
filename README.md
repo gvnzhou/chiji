@@ -13,8 +13,8 @@ React + React-Router4.0 + Webpack + ES6/ES7 + Koa2.0
 
 ## 目标功能
 
-- [x] Webpack客户端运行环境配置
-- [ ] Eslint代码校验
+- [x] Webpack配置客户端运行环境
+- [ ] ESLint代码校验
 - [ ] React热替换
 - [ ] React异步加载
 - [ ] SSR服务器端配置
