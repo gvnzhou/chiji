@@ -1,0 +1,32 @@
+{
+  "name": "chiji",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf ../public",
+    "start": "node ./config/devServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javion25/chiji.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javion25/chiji/issues"
+  },
+  "homepage": "https://github.com/javion25/chiji#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
