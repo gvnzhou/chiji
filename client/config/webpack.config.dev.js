@@ -22,6 +22,10 @@ const config = {
   entry: {
     index: [
       './src/index.js'
+    ],
+    vendor: [
+      'react',
+      'react-dom',
     ]
   },
   output: {
@@ -35,17 +39,27 @@ const config = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
+        loaders: [
+          'babel-loader',
+          'eslint-loader'
+        ]
+      },
+      {
+        test: /\.js$/,
+        enforce: 'pre',  // 在babel-loader对源码进行编译前进行lint的检查
+        include: /src/,  // src文件夹下的文件需要被lint
         use: [
           {
-            loader: 'babel-loader',
-            // options: {
-            //     presets: ['react-hmre']
-            // }
+            loader: 'eslint-loader',
+            options: {
+              formatter: require('eslint-friendly-formatter')   // 编译后错误报告格式
+            }
           }
         ]
       }
     ]
   },
+  
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
