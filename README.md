@@ -15,7 +15,7 @@ React + React-Router4.0 + Webpack + ES6/ES7 + Koa2.0
 
 - [x] Webpack-客户端开发环境
 - [ ] Webpack-客户端生产环境
-- [ ] ESLint代码校验
+- [x] ESLint代码校验
 - [ ] React热替换
 - [ ] React异步加载
 - [ ] SSR服务器端配置
