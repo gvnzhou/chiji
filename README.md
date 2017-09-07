@@ -26,9 +26,10 @@ npm start
 ## 目标功能
 
 - [x] Webpack-客户端开发环境
-- [ ] Webpack-客户端生产环境
 - [x] ESLint代码校验
-- [ ] React热加载和替换功能
+- [x] React热加载和替换功能
+- [ ] Sass支持
+- [ ] Webpack-客户端生产环境
 - [ ] React异步加载
 - [ ] SSR服务器端配置
 
