@@ -40,6 +40,10 @@ const config = {
     // 加载器配置
     rules: [
       {
+        test: /\.scss$/,
+        loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?sourceMap"]
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: [

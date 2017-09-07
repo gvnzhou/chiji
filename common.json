@@ -1,5 +1,5 @@
 {
-  "publicPath": "/",
+  "publicPath": "./",
   "clientPort":5000,
   "serverPort":3000
   
