@@ -5,7 +5,7 @@
 
 ## 技术栈
 
-React + React-Router4.0 + Webpack + ES6/ES7 + Koa2.0
+React + React-Router4.0 + Sass + Webpack + ES6/ES7 + Koa2.0 + Mongodb
 
 ## 项目运行
 
@@ -27,6 +27,8 @@ npm start
 
 ## 效果演示
 
+## 项目结构
+
 ## 目标功能
 
 - [x] Webpack-客户端开发环境
@@ -34,10 +36,8 @@ npm start
 - [x] React热加载和替换功能
 - [x] Sass支持
 - [x] Webpack-客户端生产环境
-- [ ] React异步加载
 - [ ] SSR服务器端配置
-
-## 项目结构
+- [ ] React异步加载
 
 ## 总结
 
