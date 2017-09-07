@@ -13,6 +13,8 @@ React + React-Router4.0 + Webpack + ES6/ES7 + Koa2.0
 
 `
 cd ./client
+、
+、
 npm i 
 `
 
