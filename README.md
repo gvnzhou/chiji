@@ -9,6 +9,18 @@ React + React-Router4.0 + Webpack + ES6/ES7 + Koa2.0
 
 ## 项目运行
 
+### 下载、安装
+`
+cd ./client
+
+npm i 
+`
+
+### 运行
+`
+npm start
+`
+
 ## 效果演示
 
 ## 目标功能
@@ -16,7 +28,7 @@ React + React-Router4.0 + Webpack + ES6/ES7 + Koa2.0
 - [x] Webpack-客户端开发环境
 - [ ] Webpack-客户端生产环境
 - [x] ESLint代码校验
-- [ ] React热替换
+- [ ] React热加载和替换功能
 - [ ] React异步加载
 - [ ] SSR服务器端配置
 

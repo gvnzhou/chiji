@@ -15,10 +15,10 @@ class Home extends Component {
           logo
         </header>
         <nav>
-          导航12323sawdada
+          aasda55555yyyy
         </nav>
       </div>
-    )
+    );
   }
 }
 

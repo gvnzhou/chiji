@@ -19,6 +19,8 @@ module.exports = {
     // http://eslint.org/docs/rules/comma-dangle
     // 'comma-dangle': ['error', 'only-multiline'],
     // 'semi': 0
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "eol-last": 0
   },
   globals: {    // 声明在代码中自定义的全局变量
     'CONFIG': true

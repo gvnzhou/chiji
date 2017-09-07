@@ -21,7 +21,10 @@ const config = {
   devtool: 'source-map',
   entry: {
     index: [
-      './src/index.js'
+      'react-hot-loader/patch',
+      'webpack-dev-server/client?http://127.0.0.1:5000/',
+      'webpack/hot/dev-server',
+      './src'
     ],
     vendor: [
       'react',
@@ -75,6 +78,7 @@ const config = {
       // ],
       filename: 'index.html' 
     }),
+    new webpack.HotModuleReplacementPlugin(),    
   ]
 };
 
