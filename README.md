@@ -10,13 +10,14 @@ React + React-Router4.0 + Webpack + ES6/ES7 + Koa2.0
 ## 项目运行
 
 ### 下载、安装
+
 `
 cd ./client
-
 npm i 
 `
 
 ### 运行
+
 `
 npm start
 `
