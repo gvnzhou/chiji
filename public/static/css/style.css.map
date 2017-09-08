@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/containers/Home/src/containers/Home/index.scss"],"names":[],"mappings":"AAAA;EACE,sBAAqB,EACtB","file":"static/css/style.css","sourcesContent":[".home_nav_a {\n  border: 1px solid red;\n}\n\n\n// WEBPACK FOOTER //\n// ./src/containers/Home/src/containers/Home/index.scss"],"sourceRoot":""}
