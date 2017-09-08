@@ -32,7 +32,7 @@ npm start
 ## 目标功能
 
 - [x] Webpack-客户端开发环境
-- [x] ESLint代码校验
+- [ ] ESLint代码校验-node端和客户端
 - [x] React热加载和替换功能
 - [x] Sass支持
 - [x] Webpack-客户端生产环境

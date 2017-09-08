@@ -21,7 +21,7 @@ const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 //srcDir为当前开发目录(默认:/src)
 const srcDir = path.resolve(process.cwd(), 'src');
   //assetsDir为当前建立目录(默认:/assets)
-const assetsDir = path.resolve(process.cwd(), 'dist');
+const assetsDir = path.resolve(process.cwd(), '../public');
   //生成JS的目录地址(默认:)
 const jsDir = 'static/js/';
   //生成css的目录地址(默认:)
