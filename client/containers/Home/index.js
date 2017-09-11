@@ -13,10 +13,10 @@ class Home extends Component {
     return (
       <div>
         <header>
-          logo
+          logo11
         </header>
         <nav>
-          <a className="home_nav_a">首页</a>
+          <a className="home_nav_a">首页1112223333</a>
         </nav>
       </div>
     );

@@ -23,13 +23,19 @@ require('css-modules-require-hook')({
   generateScopedName: '[name]__[local]__[hash:base64:8]'
 })
 
+const app = require('./app.js').default
+const webpack = require('webpack')
+const devMiddleware = require('koa-webpack-dev-middleware')
+const hotMiddleware = require('koa-webpack-hot-middleware')
+const config = require('../build/webpack.config.dev')
+const compiler = webpack(config)
 
 
-const app = require('./app.js')
+app.use(devMiddleware(compiler, {
+  noInfo: true,
+  publicPath: config.output.publicPath
+}))
+app.use(hotMiddleware(compiler))
 
-console.log(1111)
-console.log(app)
 
-// app.listen(3333, () => {
-//   console.log("Server is listening at 127.0.0.1:3333")
-// });
+app.listen(3000);

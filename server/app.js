@@ -9,16 +9,16 @@ const router = koaBetterRouter().loadMethods();
 
 function renderFullPage(html, initState){
     // const main = JSON.parse(fs.readFileSync(path.join(__dirname,'../webpack/webpack-assets.json'))).javascript.main;
-    const index = '/public/static/js/index.js'
-    const vendor = '/public/static/js/vendor.js'
-    const manifest = '/public/static/js/manifest.js'
+    const index = '/dist/client/index.js'
+    const vendor = '/dist/client/vendor.js'
+    const manifest = '/dist/client/manifest.js'
     return `
         <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
             <title></title>
-            <link href="/public/static/css/style.css" rel="stylesheet"></head>
+            <link href="/dist/client/css/style.css" rel="stylesheet"></head>
         </head>
         <body>
             <div id="root"><div>${html}</div></div>
@@ -47,6 +47,8 @@ app.use(router.middleware());
 // app.use(ctx => {
 //   ctx.body = 'Hello Koa';
 // });
+
+// console.log(app)
 
 export default app;
 

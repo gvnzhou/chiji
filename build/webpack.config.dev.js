@@ -1,16 +1,17 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const config = {
   devtool: 'cheap-module-eval-source-map',
-  context: path.resolve(__dirname, '..'),
+  // context: path.resolve(__dirname, '..'),
   entry: {
-    bundle: [
-      './client',
-      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
+    index: [
+      'react-hot-loader/patch',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=10000&reload=true',
+
+      './client/index.js',
     ],
     vendor: [
       'react',
@@ -18,9 +19,9 @@ const config = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, '../dist/client'),
+    path: path.resolve(__dirname, './dist/client'),
     filename: '[name].js',
-    chunkFilename: 'chunk.[name].js',
+    // chunkFilename: 'chunk.[name].js',
     publicPath: '/'
 
   },
@@ -56,6 +57,7 @@ const config = {
   },
   
   plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new HtmlWebpackPlugin({
       template: './client/index.html',
       inject: true, // 如果设置为 true 或者 body，所有的 javascript 资源将被放置到 body 元素的底部，'head' 将放置到 head 元素中。
@@ -70,7 +72,9 @@ const config = {
       // ],
       filename: 'index.html' 
     }),
-    new webpack.HotModuleReplacementPlugin(),    
+    new ProgressBarPlugin({summary: false}),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin() 
   ]
 };
 
