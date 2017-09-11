@@ -3,6 +3,8 @@
 
 一个关于React同构的实践项目。
 
+哇，很难受。正在第二次重构中...
+
 ## 技术栈
 
 React + React-Router4.0 + Sass + Webpack + ES6/ES7 + Koa2.0 + Mongodb
@@ -36,8 +38,8 @@ npm start
 - [x] React热加载和替换功能
 - [x] Sass支持
 - [x] Webpack-客户端生产环境
-- [ ] SSR服务器端配置
-- [ ] Node端css处理
+- [x] SSR服务器端配置
+- [ ] Node端加载css问题处理
 - [ ] React异步加载
 
 ## 总结

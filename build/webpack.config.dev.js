@@ -1,30 +1,16 @@
-'use strict';
-
 const webpack = require('webpack');
 const path = require('path');
-const process = require('process');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-/**
-  设置默认常用路径
-**/
-//srcDir为当前开发目录(默认:/src)
-const srcDir = path.resolve(process.cwd(), 'src');
-//assetsDir为当前建立目录(默认:/assets)
-const assetsDir = path.resolve(process.cwd(), 'assets');
-//生成JS的目录地址(默认:)
-const jsDir = 'dist/js/';
-//生成css的目录地址(默认:)
-const cssDir = 'dist/css/';
+// const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const config = {
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
+  context: path.resolve(__dirname, '..'),
   entry: {
-    index: [
-      'react-hot-loader/patch',
-      'webpack-dev-server/client?http://127.0.0.1:5000/',
-      'webpack/hot/dev-server',
-      './src'
+    bundle: [
+      './client',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
     ],
     vendor: [
       'react',
@@ -32,9 +18,11 @@ const config = {
     ]
   },
   output: {
-    path: assetsDir,
-    filename: jsDir + '[name].js',
+    path: path.resolve(__dirname, '../dist/client'),
+    filename: '[name].js',
+    chunkFilename: 'chunk.[name].js',
     publicPath: '/'
+
   },
   module: {
     // 加载器配置
@@ -69,7 +57,7 @@ const config = {
   
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: './client/index.html',
       inject: true, // 如果设置为 true 或者 body，所有的 javascript 资源将被放置到 body 元素的底部，'head' 将放置到 head 元素中。
       hash: true, // 将添加一个唯一的 webpack 编译 hash 到所有包含的脚本和 CSS 文件，对于解除 cache 很有用
       minify: {
