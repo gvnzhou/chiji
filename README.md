@@ -38,7 +38,8 @@ npm start
 - [x] React热加载和替换功能
 - [x] Sass支持
 - [x] Node端加载css问题处理
-- [ ] Webpack-生产环境环境
+- [ ] 前后端路由统一
+- [ ] Webpack-生产环境搭建
 - [ ] React异步加载
 
 ## 总结
