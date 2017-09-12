@@ -4,12 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const config = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval-source-map',
   // context: path.resolve(__dirname, '..'),
   entry: {
     index: [
-      'react-hot-loader/patch',
-      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=10000&reload=true',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=10000',
 
       './client/index.js',
     ],
@@ -19,9 +18,9 @@ const config = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, './dist/client'),
+    path: path.resolve(__dirname, '../dist/client'),
     filename: '[name].js',
-    // chunkFilename: 'chunk.[name].js',
+    chunkFilename: 'chunk.[name].js',
     publicPath: '/'
 
   },
@@ -35,10 +34,17 @@ const config = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: [
-          'babel-loader',
-          'eslint-loader'
-        ]
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react', 'stage-2', 'react-hmre'],
+          plugins: ['transform-runtime'],
+          cacheDirectory: true
+        }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
       },
       {
         test: /\.js$/,
@@ -52,7 +58,11 @@ const config = {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
+      },
     ]
   },
   
@@ -67,9 +77,9 @@ const config = {
         collapseWhitespace: false
       },
       // 允许只添加某些块
-      // chunks: [ 
-      //   'index', 'vendor', 'manifest'
-      // ],
+      chunks: [ 
+        'index', 'vendor', 'manifest'
+      ],
       filename: 'index.html' 
     }),
     new ProgressBarPlugin({summary: false}),

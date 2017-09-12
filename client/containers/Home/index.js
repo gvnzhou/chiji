@@ -16,7 +16,7 @@ class Home extends Component {
           logo11
         </header>
         <nav>
-          <a className="home_nav_a">首页1112223333</a>
+          <a className="home_nav_a">首页111255</a>
         </nav>
       </div>
     );

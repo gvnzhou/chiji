@@ -28,14 +28,19 @@ const webpack = require('webpack')
 const devMiddleware = require('koa-webpack-dev-middleware')
 const hotMiddleware = require('koa-webpack-hot-middleware')
 const config = require('../build/webpack.config.dev')
-const compiler = webpack(config)
+const compile = webpack(config)
 
-
-app.use(devMiddleware(compiler, {
+app.use(devMiddleware(compile, {
   noInfo: true,
   publicPath: config.output.publicPath
 }))
-app.use(hotMiddleware(compiler))
+app.use(hotMiddleware(compile, {
+  // log: console.log, 
+  // path: '/__webpack_hmr', 
+  // heartbeat: 10 * 1000 
+}))
+
+
 
 
 app.listen(3000);

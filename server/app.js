@@ -7,6 +7,7 @@ import Home from '../client/containers/Home/index'
 const app = new Koa();
 const router = koaBetterRouter().loadMethods();
 
+
 function renderFullPage(html, initState){
     // const main = JSON.parse(fs.readFileSync(path.join(__dirname,'../webpack/webpack-assets.json'))).javascript.main;
     const index = '/dist/client/index.js'
