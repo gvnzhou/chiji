@@ -36,11 +36,10 @@ npm start
 - [x] Webpack-开发环境搭建
 - [x] ESLint代码校验
 - [x] React热加载和替换功能
-- [x] Sass支持
-- [x] Node端加载css问题处理
+- [x] Node端处理css(scss)
 - [ ] 前后端路由统一
+- [ ] React按需加载(Code Spliting)
 - [ ] Webpack-生产环境搭建
-- [ ] React异步加载
 
 ## 总结
 

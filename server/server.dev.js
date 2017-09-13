@@ -25,10 +25,36 @@ require('css-modules-require-hook')({
 
 const app = require('./app.js').default
 const webpack = require('webpack')
+const fs = require('fs')
+const path = require('path')
 const devMiddleware = require('koa-webpack-dev-middleware')
 const hotMiddleware = require('koa-webpack-hot-middleware')
-const config = require('../build/webpack.config.dev')
+const views = require('koa-views')
+const router = require('./routes')
+const clientRoute = require('./clientRoute')
+const config = require('../config/webpack.config.dev')
+const port = process.env.port || 3000
 const compile = webpack(config)
+
+// Webpack hook event to write html file into `/views/dev` from `/views/tpl` due to server render
+compile.plugin('emit', (compilation, callback) => {
+  const assets = compilation.assets
+  let file, data
+
+  Object.keys(assets).forEach(key => {
+      if (key.match(/\.html$/)) {
+          file = path.resolve(__dirname, key)
+          data = assets[key].source()
+          fs.writeFileSync(file, data)
+      }
+  })
+  callback()
+})
+
+app.use(views(path.resolve(__dirname, '../views/dev'), {map: {html: 'ejs'}}))
+app.use(clientRoute)
+app.use(router.routes())
+app.use(router.allowedMethods())
 
 app.use(devMiddleware(compile, {
   noInfo: true,
@@ -43,4 +69,5 @@ app.use(hotMiddleware(compile, {
 
 
 
-app.listen(3000);
+
+app.listen(port);
