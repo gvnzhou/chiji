@@ -7,7 +7,7 @@
 
 // Javascript require hook
 require('babel-register')({
-  presets: ['es2015', 'react', 'stage-2'],
+  presets: ['es2015', 'react', 'stage-0'],
   plugins: ['transform-runtime']
 })
 
@@ -30,8 +30,8 @@ const path = require('path')
 const devMiddleware = require('koa-webpack-dev-middleware')
 const hotMiddleware = require('koa-webpack-hot-middleware')
 const views = require('koa-views')
-const router = require('./routes')
-const clientRoute = require('./clientRoute')
+const router = require('./routes').default
+const clientRoute = require('./clientRoute').default
 const config = require('../config/webpack.config.dev')
 const port = process.env.port || 3000
 const compile = webpack(config)
@@ -51,7 +51,8 @@ compile.plugin('emit', (compilation, callback) => {
   callback()
 })
 
-app.use(views(path.resolve(__dirname, '../views/dev'), {map: {html: 'ejs'}}))
+app.use(views(path.resolve(__dirname, '../template/dev'), {map: {html: 'ejs'}}))
+
 app.use(clientRoute)
 app.use(router.routes())
 app.use(router.allowedMethods())
@@ -60,14 +61,6 @@ app.use(devMiddleware(compile, {
   noInfo: true,
   publicPath: config.output.publicPath
 }))
-app.use(hotMiddleware(compile, {
-  // log: console.log, 
-  // path: '/__webpack_hmr', 
-  // heartbeat: 10 * 1000 
-}))
-
-
-
-
+app.use(hotMiddleware(compile))
 
 app.listen(port);

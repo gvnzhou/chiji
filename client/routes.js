@@ -12,7 +12,7 @@ const routes = {
       indexRoute: {
           getComponent(nextState, callback) {
               require.ensure([], require => {
-                  callback(null, require('./containers/Home'))
+                  callback(null, require('./containers/Home/index'))
               }, 'home')
           }
       },
@@ -20,7 +20,7 @@ const routes = {
           path: 'test',
           getComponent(nextState, callback) {
               require.ensure([], require => {
-                  callback(null, require('./containers/Home'))
+                  callback(null, require('./containers/Home/index'))
               }, 'test')
           }
       }]
